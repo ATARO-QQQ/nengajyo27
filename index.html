@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2027年 年賀状アンケート</title>
+    </head>
+
+    <body>
+        <h1>2027年 年賀状受付アンケート</h1>
+        <hr>
+        <div id="step1">
+            <p>Q1. 2027年、あなたは私からの年賀状を受け取りますか？</p>
+            <button onclick="answerQ1('はい')">はい</button>
+            <button onclick="answerQ1('いいえ')">いいえ</button>
+        </div>
+        <div id="step2" style="display:none;">
+            <p>Q2. あなたの氏名を教えてください。</p>
+            <p> 氏名：<input type="text" id="inputName">
+                <button onclick="answerQ2()">次へ</button>
+            </p>
+        </div>
+        <div id="step3" style="display:none;">
+            <p>Q3. 年賀状の希望する図柄を選んでください。</p>
+            <button onclick="answerQ3('版画')">版画</button>
+            <button onclick="answerQ3('絵')">絵</button>
+            <button onclick="answerQ3('写真')">写真</button>
+        </div>
+        <div id="step4" style="display:none;">
+            <p>Q4. 希望するお届け方法を選んでください。</p>
+            <button onclick="answerQ4('郵送')">郵送</button>
+            <button onclick="answerQ4('デジタル送信')">デジタル送信</button>
+            <button onclick="answerQ4('手渡し')">手渡し</button>
+        </div>
+        <div id="step5" style="display:none;">
+            <p>Q5. どのデジタルで送ればよろしいですか？</p>
+            <button onclick="answerQ5('LINE')">LINE</button>
+            <button onclick="answerQ5('Discord')">Discord</button>
+            <button onclick="answerQ5('メール')">メール</button>
+        </div>
+        <div id="step6" style="display:none;">
+            <p>Q6. セキュリティ上、住所はこのフォームに打ち込めません。直接的な手段で私に住所をお知らせください。よろしいですか？</p>
+            <button onclick="answerQ6('はい')">はい</button>
+        </div>
+        <div id="stepEnd" style="display:none;">
+            <p>回答が送信されました。ご協力ありがとうございました。</p>
+        </div>
+        <br>
+        <hr>
+        <h2>管理者用 結果確認</h2>
+        <p><button onclick="loadResults()">最新回答データを取得する</button></p>
+        <div id="resultsContainer"></div>
+        <script src="script1.js"></script>
+    </body>
+
+</html>
